@@ -1,0 +1,379 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- APRESENTAÇÃO -->
+<header class="hero" id="inicio">
+    <div class="container">
+        <div class="row align-items-center g-4">
+
+            <div class="col-lg-7">
+                <span class="hero-tag">
+                    🌿 Saúde, Comida e Sociedade
+                </span>
+
+                <h1>
+                    Pequenas escolhas.<br>
+                    <span>Grandes mudanças.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Você já parou para pensar em como a alimentação,
+                    a água, o movimento e o sono fazem parte da sua vida?
+                    Explore, aprenda e descubra novas maneiras de cuidar
+                    do seu bem-estar!
+                </p>
+
+                <div class="d-flex flex-wrap gap-3 mt-4">
+                    <a href="#comida" class="btn btn-green">
+                        Explorar conteúdos →
+                    </a>
+
+                    <a href="#desafio" class="btn btn-outline-green">
+                        Fazer um desafio ✨
+                    </a>
+                </div>
+
+                <p class="small text-secondary mt-4 mb-0">
+                    Um espaço para aprender, refletir e descobrir.
+                </p>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="hero-visual">
+                    <div class="hero-circle" role="img"
+                         aria-label="Frutas e alimentação saudável">
+                        🍎
+                    </div>
+
+                    <div class="floating-note note-top">
+                        💧 Hidrate-se!
+                    </div>
+
+                    <div class="floating-note note-bottom">
+                        💚 Cuide de você
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+
+<!-- TEMAS DO PROJETO -->
+<div class="topic-strip">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-6 col-md-3">
+                <div class="topic-item">
+                    <span class="topic-icon">🥗</span>
+                    <span>Alimentação</span>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="topic-item">
+                    <span class="topic-icon">💧</span>
+                    <span>Hidratação</span>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="topic-item">
+                    <span class="topic-icon">🏃</span>
+                    <span>Movimento</span>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="topic-item">
+                    <span class="topic-icon">😴</span>
+                    <span>Sono e descanso</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- COMIDA E SAÚDE -->
+<section class="section-padding" id="comida">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <span class="section-label">Conhecimento para o dia a dia</span>
+            <h2 class="section-title">Comida &amp; Saúde</h2>
+            <p class="section-description">
+                Comer bem não precisa ser complicado. Entenda como
+                escolhas variadas e hábitos simples podem contribuir
+                para sua saúde e disposição.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <article class="content-card">
+                    <div class="card-icon">🍎</div>
+                    <h3>Alimentação equilibrada</h3>
+                    <p>
+                        Conheça os diferentes alimentos e descubra por
+                        que variar o que comemos é importante para o corpo.
+                    </p>
+                    <a href="#sobre" class="text-link">
+                        Aprender mais →
+                    </a>
+                </article>
+            </div>
+
+            <div class="col-md-4">
+                <article class="content-card">
+                    <div class="card-icon">💧</div>
+                    <h3>A importância da água</h3>
+                    <p>
+                        Entenda por que a hidratação faz parte da rotina
+                        e como lembrar de beber água ao longo do dia.
+                    </p>
+                    <a href="#bem-estar" class="text-link">
+                        Ver dicas →
+                    </a>
+                </article>
+            </div>
+
+            <div class="col-md-4">
+                <article class="content-card">
+                    <div class="card-icon">🥦</div>
+                    <h3>Comida e sociedade</h3>
+                    <p>
+                        Descubra como cultura, família, ambiente e acesso
+                        aos alimentos influenciam nossos hábitos alimentares.
+                    </p>
+                    <a href="#sobre" class="text-link">
+                        Conhecer o projeto →
+                    </a>
+                </article>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- BEM-ESTAR -->
+<section class="section-padding wellbeing-section" id="bem-estar">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <span class="section-label">Cuidar também é aprender</span>
+            <h2 class="section-title">Seu bem-estar importa!</h2>
+            <p class="section-description">
+                Saúde envolve mais do que comida. Veja outros hábitos
+                que ajudam a cuidar do corpo e da mente.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-sm-6 col-lg-3">
+                <article class="wellbeing-card">
+                    <span class="emoji">🏃‍♀️</span>
+                    <h3>Movimente-se</h3>
+                    <p>
+                        Brincar, caminhar, dançar e praticar esportes
+                        são maneiras de incluir movimento na rotina.
+                    </p>
+                </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+                <article class="wellbeing-card">
+                    <span class="emoji">😴</span>
+                    <h3>Durma bem</h3>
+                    <p>
+                        O sono ajuda na recuperação do corpo, na atenção
+                        e na aprendizagem.
+                    </p>
+                </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+                <article class="wellbeing-card">
+                    <span class="emoji">🧠</span>
+                    <h3>Respeite seu ritmo</h3>
+                    <p>
+                        Descansar, reconhecer sentimentos e conversar
+                        com alguém de confiança também são importantes.
+                    </p>
+                </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+                <article class="wellbeing-card">
+                    <span class="emoji">🤝</span>
+                    <h3>Cuide em conjunto</h3>
+                    <p>
+                        Família, amigos e comunidade podem ajudar a
+                        construir hábitos mais saudáveis.
+                    </p>
+                </article>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- DESAFIOS E QUIZZES -->
+<section class="challenge-section" id="desafio">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <span class="section-label">Agora é com você!</span>
+            <h2 class="section-title">Aprenda participando</h2>
+            <p class="section-description">
+                Responda, descubra curiosidades e participe das atividades
+                do Viver Bem de Verdade.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Quiz recreativo já implementado -->
+            <div class="col-lg-6">
+                <article class="challenge-card challenge-fruit">
+                    <div class="challenge-emoji">🍓🍍🍉</div>
+
+                    <span class="challenge-status">
+                        QUIZ RECREATIVO
+                    </span>
+
+                    <h3>Descubra qual fruta combina com você!</h3>
+
+                    <p>
+                        Responda a 10 perguntas divertidas e descubra
+                        qual fruta representa melhor seu estilo e
+                        suas características.
+                    </p>
+
+                    <a href="{% url 'quizzes' %}"
+                       class="btn btn-green">
+                        Descobrir minha fruta →
+                    </a>
+                </article>
+            </div>
+
+            <!-- Espaço para o questionário principal do projeto -->
+            <div class="col-lg-6">
+                <article class="challenge-card challenge-habits">
+                    <div class="challenge-emoji">📋💚</div>
+
+                    <span class="challenge-status">
+                        PROJETO DE EXTENSÃO
+                    </span>
+
+                    <h3>Como estão seus hábitos?</h3>
+
+                    <p>
+                        Reflita sobre alimentação, hidratação, sono e
+                        movimento em um questionário educativo e anônimo.
+                    </p>
+
+                    <a href="#sobre" class="btn btn-outline-green">
+                        Conhecer a atividade →
+                    </a>
+                </article>
+            </div>
+
+        </div>
+
+        <p class="text-center text-secondary small mt-4 mb-0">
+            O quiz das frutas é recreativo. Ele não é um teste científico
+            de personalidade nem uma avaliação de saúde.
+        </p>
+    </div>
+</section>
+
+
+<!-- SOBRE O PROJETO -->
+<section class="section-padding" id="sobre">
+    <div class="container">
+
+        <div class="about-box">
+            <div class="row align-items-center g-4">
+
+                <div class="col-lg-7">
+                    <span class="section-label">Sobre a iniciativa</span>
+
+                    <h2 class="section-title">
+                        Informação que faz diferença.
+                    </h2>
+
+                    <p class="text-secondary" style="line-height: 1.9;">
+                        O <strong>Viver Bem de Verdade: Saúde, Comida e
+                        Sociedade</strong> é um projeto de extensão que
+                        busca aproximar os estudantes de informações
+                        sobre alimentação, hidratação, atividade física,
+                        sono e bem-estar.
+                    </p>
+
+                    <p class="text-secondary mb-0" style="line-height: 1.9;">
+                        Por meio de conteúdos e atividades interativas,
+                        a proposta é estimular a reflexão sobre os hábitos
+                        do cotidiano e a relação entre saúde, escolhas
+                        pessoais e realidade social.
+                    </p>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="about-highlight mb-3">
+                        <strong>🎯 Nosso objetivo</strong>
+                        <p>
+                            Incentivar o conhecimento e a reflexão
+                            sobre hábitos que contribuem para o bem-estar.
+                        </p>
+                    </div>
+
+                    <div class="about-highlight mb-3">
+                        <strong>🌍 Nossa abordagem</strong>
+                        <p>
+                            Aprender sem julgamentos, considerando que
+                            cada pessoa vive uma realidade diferente.
+                        </p>
+                    </div>
+
+                    <div class="about-highlight">
+                        <strong>🔒 Respeito e privacidade</strong>
+                        <p>
+                            As atividades de coleta de informações devem
+                            ser voluntárias e anônimas, sem solicitar
+                            dados pessoais desnecessários.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Fecha o menu mobile depois que o usuário escolhe uma seção.
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            const menu = document.getElementById('menuPrincipal');
+
+            if (menu.classList.contains('show')) {
+                bootstrap.Collapse.getOrCreateInstance(menu).hide();
+            }
+        });
+    });
+</script>
+
+{% endblock %}

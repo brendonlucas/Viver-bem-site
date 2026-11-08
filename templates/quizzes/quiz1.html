@@ -1,0 +1,496 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+
+    <main class="container py-4 py-md-5">
+
+        <header class="quiz-header text-center mb-4">
+            <div class="display-4 mb-2">🍓 🍍 🍉</div>
+            <h1 class="h2 fw-bold">Qual fruta combina com você?</h1>
+            <p class="mb-0">
+                Responda às perguntas e descubra sua fruta!
+            </p>
+        </header>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+
+                {% if erro %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ erro }}
+                    </div>
+                {% endif %}
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="fw-semibold">Seu progresso</span>
+                    <span id="progress-text" class="text-secondary">
+                    Pergunta 1 de 10
+                </span>
+                </div>
+
+                <div class="progress mb-4">
+                    <div id="progress-bar"
+                         class="progress-bar"
+                         style="width: 10%">
+                    </div>
+                </div>
+
+                <form method="post"
+                      action="{% url 'quiz_frutas' %}"
+                      id="fruit-quiz">
+
+                    {% csrf_token %}
+
+                    <div class="quiz-card shadow-sm p-3 p-md-4">
+
+                        <!-- PERGUNTA 1 -->
+                        <section class="question active" data-question="1">
+                            <h2 class="h5 fw-bold mb-4">
+                                1. Como você prefere passar o fim de semana?
+                            </h2>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q1" value="A" required>
+                                <span class="answer-letter">A</span>
+                                <span>Saindo com os amigos e dando risada.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q1" value="B">
+                                <span class="answer-letter">B</span>
+                                <span>Fazendo algo diferente e cheio de aventura.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q1" value="C">
+                                <span class="answer-letter">C</span>
+                                <span>Ficando tranquilo em casa, curtindo meu tempo.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q1" value="D">
+                                <span class="answer-letter">D</span>
+                                <span>Explorando lugares novos e conhecendo pessoas.</span>
+                            </label>
+                        </section>
+
+                        <!-- PERGUNTA 2 -->
+                        <section class="question" data-question="2">
+                            <h2 class="h5 fw-bold mb-4">
+                                2. Como seus amigos descreveriam você?
+                            </h2>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q2" value="A" required>
+                                <span class="answer-letter">A</span>
+                                <span>Divertido e carismático.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q2" value="B">
+                                <span class="answer-letter">B</span>
+                                <span>Corajoso e cheio de atitude.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q2" value="C">
+                                <span class="answer-letter">C</span>
+                                <span>Tranquilo e companheiro.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q2" value="D">
+                                <span class="answer-letter">D</span>
+                                <span>Animado e otimista.</span>
+                            </label>
+                        </section>
+
+                        <!-- PERGUNTA 3 -->
+                        <section class="question" data-question="3">
+                            <h2 class="h5 fw-bold mb-4">
+                                3. Escolha a cor que mais combina com você.
+                            </h2>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q3" value="A" required>
+                                <span class="answer-letter">A</span>
+                                <span>Vermelho.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q3" value="B">
+                                <span class="answer-letter">B</span>
+                                <span>Amarelo.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q3" value="C">
+                                <span class="answer-letter">C</span>
+                                <span>Verde.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q3" value="D">
+                                <span class="answer-letter">D</span>
+                                <span>Laranja.</span>
+                            </label>
+                        </section>
+
+                        <!-- PERGUNTA 4 -->
+                        <section class="question" data-question="4">
+                            <h2 class="h5 fw-bold mb-4">
+                                4. Quando aparece um problema inesperado, você...
+                            </h2>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q4" value="A" required>
+                                <span class="answer-letter">A</span>
+                                <span>Conversa com alguém e tenta resolver junto.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q4" value="B">
+                                <span class="answer-letter">B</span>
+                                <span>Enfrenta a situação sem fugir do desafio.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q4" value="C">
+                                <span class="answer-letter">C</span>
+                                <span>Pensa com calma e procura uma solução.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q4" value="D">
+                                <span class="answer-letter">D</span>
+                                <span>Procura enxergar o lado positivo e tenta novamente.</span>
+                            </label>
+                        </section>
+
+                        <!-- PERGUNTA 5 -->
+                        <section class="question" data-question="5">
+                            <h2 class="h5 fw-bold mb-4">
+                                5. Qual lugar você escolheria para relaxar?
+                            </h2>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q5" value="A" required>
+                                <span class="answer-letter">A</span>
+                                <span>Um parque cheio de amigos e diversão.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q5" value="B">
+                                <span class="answer-letter">B</span>
+                                <span>Uma trilha ou um lugar para explorar.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q5" value="C">
+                                <span class="answer-letter">C</span>
+                                <span>Uma praia tranquila, com sombra e brisa.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q5" value="D">
+                                <span class="answer-letter">D</span>
+                                <span>Um lugar ensolarado, com música e atividades.</span>
+                            </label>
+                        </section>
+
+                        <!-- PERGUNTA 6 -->
+                        <section class="question" data-question="6">
+                            <h2 class="h5 fw-bold mb-4">
+                                6. Em um trabalho em grupo, qual é seu papel?
+                            </h2>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q6" value="A" required>
+                                <span class="answer-letter">A</span>
+                                <span>Animo o grupo e aproximo todo mundo.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q6" value="B">
+                                <span class="answer-letter">B</span>
+                                <span>Tomo a iniciativa e encaro os desafios.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q6" value="C">
+                                <span class="answer-letter">C</span>
+                                <span>Organizo as ideias e ajudo os colegas.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q6" value="D">
+                                <span class="answer-letter">D</span>
+                                <span>Trago ideias criativas e entusiasmo.</span>
+                            </label>
+                        </section>
+
+                        <!-- PERGUNTA 7 -->
+                        <section class="question" data-question="7">
+                            <h2 class="h5 fw-bold mb-4">
+                                7. Qual qualidade você mais valoriza em si?
+                            </h2>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q7" value="A" required>
+                                <span class="answer-letter">A</span>
+                                <span>Simpatia.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q7" value="B">
+                                <span class="answer-letter">B</span>
+                                <span>Coragem.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q7" value="C">
+                                <span class="answer-letter">C</span>
+                                <span>Lealdade.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q7" value="D">
+                                <span class="answer-letter">D</span>
+                                <span>Criatividade.</span>
+                            </label>
+                        </section>
+
+                        <!-- PERGUNTA 8 -->
+                        <section class="question" data-question="8">
+                            <h2 class="h5 fw-bold mb-4">
+                                8. Quando conhece alguém novo, você...
+                            </h2>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q8" value="A" required>
+                                <span class="answer-letter">A</span>
+                                <span>Puxa conversa e tenta fazer amizade.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q8" value="B">
+                                <span class="answer-letter">B</span>
+                                <span>Age com confiança e mostra sua personalidade.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q8" value="C">
+                                <span class="answer-letter">C</span>
+                                <span>Observa primeiro e vai se soltando aos poucos.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q8" value="D">
+                                <span class="answer-letter">D</span>
+                                <span>Fica animado para descobrir coisas sobre a pessoa.</span>
+                            </label>
+                        </section>
+
+                        <!-- PERGUNTA 9 -->
+                        <section class="question" data-question="9">
+                            <h2 class="h5 fw-bold mb-4">
+                                9. Escolha uma atividade para fazer agora.
+                            </h2>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q9" value="A" required>
+                                <span class="answer-letter">A</span>
+                                <span>Jogar algo divertido com os amigos.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q9" value="B">
+                                <span class="answer-letter">B</span>
+                                <span>Praticar esportes ou experimentar uma aventura.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q9" value="C">
+                                <span class="answer-letter">C</span>
+                                <span>Desenhar, ouvir música ou descansar.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q9" value="D">
+                                <span class="answer-letter">D</span>
+                                <span>Conhecer algo novo ou inventar alguma coisa.</span>
+                            </label>
+                        </section>
+
+                        <!-- PERGUNTA 10 -->
+                        <section class="question" data-question="10">
+                            <h2 class="h5 fw-bold mb-4">
+                                10. Se pudesse ter um superpoder, qual escolheria?
+                            </h2>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q10" value="A" required>
+                                <span class="answer-letter">A</span>
+                                <span>Fazer qualquer pessoa sorrir.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q10" value="B">
+                                <span class="answer-letter">B</span>
+                                <span>Ter força e coragem extraordinárias.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q10" value="C">
+                                <span class="answer-letter">C</span>
+                                <span>Proteger e ajudar quem você ama.</span>
+                            </label>
+
+                            <label class="answer-option">
+                                <input type="radio" name="q10" value="D">
+                                <span class="answer-letter">D</span>
+                                <span>Ter energia ilimitada para explorar o mundo.</span>
+                            </label>
+                        </section>
+
+                    </div>
+
+                    <!-- NAVEGAÇÃO -->
+                    <div class="d-flex justify-content-between align-items-center gap-3 mt-4">
+                        <button type="button"
+                                id="prev-btn"
+                                class="btn btn-outline-secondary px-4"
+                                disabled>
+                            ← Voltar
+                        </button>
+
+                        <button type="button"
+                                id="next-btn"
+                                class="btn btn-success px-4">
+                            Próxima →
+                        </button>
+
+                        <button type="submit"
+                                id="finish-btn"
+                                class="btn btn-success px-4"
+                                hidden>
+                            Ver resultado 🍓
+                        </button>
+                    </div>
+
+                    <p class="text-center text-secondary small mt-4">
+                        Quiz recreativo: não é uma avaliação científica
+                        da personalidade.
+                    </p>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const form = document.getElementById("fruit-quiz");
+        const questions = [...document.querySelectorAll(".question")];
+
+        const progressBar = document.getElementById("progress-bar");
+        const progressText = document.getElementById("progress-text");
+
+        const prevBtn = document.getElementById("prev-btn");
+        const nextBtn = document.getElementById("next-btn");
+        const finishBtn = document.getElementById("finish-btn");
+
+        let currentQuestion = 0;
+        const totalQuestions = questions.length;
+
+        function showQuestion(index) {
+            questions.forEach((question, i) => {
+                question.classList.toggle("active", i === index);
+            });
+
+            currentQuestion = index;
+
+            progressText.textContent =
+                `Pergunta ${index + 1} de ${totalQuestions}`;
+
+            progressBar.style.width =
+                `${((index + 1) / totalQuestions) * 100}%`;
+
+            prevBtn.disabled = index === 0;
+
+            const lastQuestion = index === totalQuestions - 1;
+
+            nextBtn.hidden = lastQuestion;
+            finishBtn.hidden = !lastQuestion;
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        function isAnswered(index) {
+            const questionNumber = index + 1;
+
+            return Boolean(
+                form.querySelector(
+                    `input[name="q${questionNumber}"]:checked`
+                )
+            );
+        }
+
+        function nextQuestion() {
+            if (!isAnswered(currentQuestion)) {
+                alert("Escolha uma alternativa para continuar!");
+                return;
+            }
+
+            if (currentQuestion < totalQuestions - 1) {
+                showQuestion(currentQuestion + 1);
+            }
+        }
+
+        nextBtn.addEventListener("click", nextQuestion);
+
+        prevBtn.addEventListener("click", () => {
+            if (currentQuestion > 0) {
+                showQuestion(currentQuestion - 1);
+            }
+        });
+
+        // Avança automaticamente quando uma alternativa é escolhida.
+        form.querySelectorAll('input[type="radio"]').forEach(input => {
+            input.addEventListener("change", () => {
+                // Pequeno intervalo para destacar a alternativa selecionada.
+                setTimeout(() => {
+                    if (currentQuestion < totalQuestions - 1) {
+                        showQuestion(currentQuestion + 1);
+                    } else {
+                        // Na última pergunta, mostra o botão de resultado.
+                        showQuestion(currentQuestion);
+                    }
+                }, 250);
+            });
+        });
+
+        // Impede envio incompleto e leva à primeira pergunta sem resposta.
+        form.addEventListener("submit", event => {
+            for (let i = 0; i < totalQuestions; i++) {
+                if (!isAnswered(i)) {
+                    event.preventDefault();
+                    showQuestion(i);
+                    alert("Responda a esta pergunta antes de ver o resultado.");
+                    return;
+                }
+            }
+        });
+
+        showQuestion(0);
+    </script>
+
+
+
+{% endblock %}

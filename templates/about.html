@@ -1,0 +1,341 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- APRESENTAÇÃO -->
+<header class="hero">
+    <div class="container">
+        <div class="row align-items-center g-4">
+
+            <div class="col-lg-7">
+                <span class="hero-label">Conheça nossa iniciativa</span>
+
+                <h1>
+                    Viver Bem de Verdade:<br>
+                    <span>Saúde, Comida e Sociedade.</span>
+                </h1>
+
+                <p>
+                    Um projeto de extensão que utiliza informação e
+                    atividades interativas para estimular a reflexão
+                    sobre alimentação, hábitos cotidianos e bem-estar.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3 mt-4">
+                    <a href="#objetivos" class="btn-green">
+                        Conhecer o projeto ↓
+                    </a>
+
+                    <a href="{% url 'home' %}" class="btn-outline-green">
+                        Voltar ao início
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="hero-visual">
+                    <div class="hero-circle" role="img"
+                         aria-label="Planta, maçã e coração">
+                        🌱🍎💚
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+
+<!-- APRESENTAÇÃO DO PROJETO -->
+<section class="section-padding">
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+                <span class="section-label">Quem somos</span>
+
+                <h2 class="section-heading">
+                    Informação para escolhas mais conscientes
+                </h2>
+
+                <p class="text-secondary" style="line-height:1.9;">
+                    O <strong>Viver Bem de Verdade: Saúde, Comida e
+                    Sociedade</strong> é um projeto de extensão voltado
+                    à educação em saúde e à reflexão sobre os hábitos
+                    do dia a dia.
+                </p>
+
+                <p class="text-secondary" style="line-height:1.9;">
+                    Por meio de conteúdos educativos, exemplos práticos
+                    e quizzes, o site aborda a relação entre alimentação,
+                    hidratação, atividade física, sono, emoções e contexto
+                    social.
+                </p>
+
+                <p class="text-secondary mb-0" style="line-height:1.9;">
+                    A proposta é tornar essas informações acessíveis e
+                    incentivar os estudantes a refletirem sobre o próprio
+                    cotidiano, respeitando as diferentes realidades.
+                </p>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="values-box">
+
+                    <div class="value-item">
+                        <span class="emoji">📚</span>
+                        <div>
+                            <h3>Educação acessível</h3>
+                            <p>
+                                Conteúdos explicados de maneira clara,
+                                com linguagem próxima dos estudantes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="value-item">
+                        <span class="emoji">🎯</span>
+                        <div>
+                            <h3>Participação ativa</h3>
+                            <p>
+                                Atividades que incentivam a curiosidade,
+                                a reflexão e o aprendizado.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="value-item">
+                        <span class="emoji">🌎</span>
+                        <div>
+                            <h3>Olhar para a sociedade</h3>
+                            <p>
+                                Reflexões sobre como cultura, condições
+                                de vida e acesso aos alimentos influenciam
+                                os hábitos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="value-item">
+                        <span class="emoji">💚</span>
+                        <div>
+                            <h3>Respeito às diferenças</h3>
+                            <p>
+                                Incentivo ao bem-estar sem julgamentos
+                                sobre o corpo, os hábitos ou a realidade
+                                de cada pessoa.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- OBJETIVOS -->
+<section class="section-padding project-section" id="objetivos">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <span class="section-label">Nossa proposta</span>
+            <h2 class="section-heading">O que queremos promover?</h2>
+
+            <p class="section-description">
+                O projeto busca aproximar o conhecimento da vida cotidiana,
+                oferecendo oportunidades para aprender, refletir e participar.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+                <article class="content-card">
+                    <div class="card-icon">🥗</div>
+                    <h3>Promover educação alimentar</h3>
+                    <p>
+                        Apresentar informações sobre variedade alimentar,
+                        hidratação e a importância dos alimentos para
+                        o organismo.
+                    </p>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <article class="content-card">
+                    <div class="card-icon">🏃</div>
+                    <h3>Estimular hábitos saudáveis</h3>
+                    <p>
+                        Incentivar a reflexão sobre movimento, sono,
+                        descanso e outros cuidados cotidianos.
+                    </p>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <article class="content-card">
+                    <div class="card-icon">🧠</div>
+                    <h3>Desenvolver consciência crítica</h3>
+                    <p>
+                        Refletir sobre as influências sociais e culturais
+                        que participam das escolhas e dos hábitos.
+                    </p>
+                </article>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- PÚBLICO E FUNCIONAMENTO -->
+<section class="section-padding">
+    <div class="container">
+
+        <div class="row g-5 align-items-start">
+
+            <div class="col-lg-5">
+                <span class="section-label">Para quem é?</span>
+
+                <h2 class="section-heading">
+                    Aprender de forma interativa
+                </h2>
+
+                <p class="text-secondary" style="line-height:1.9;">
+                    O site foi pensado especialmente para estudantes
+                    do 6º ao 9º ano do Ensino Fundamental, com conteúdos
+                    e atividades que aproximam os temas de sua realidade.
+                </p>
+
+                <p class="text-secondary mb-0" style="line-height:1.9;">
+                    A linguagem acessível e os recursos interativos
+                    procuram tornar a experiência mais interessante,
+                    sem perder o propósito educativo.
+                </p>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="steps">
+
+                    <article class="step">
+                        <div class="step-number">01</div>
+                        <div>
+                            <h3>Explore os conteúdos</h3>
+                            <p>
+                                Leia sobre alimentação, hidratação,
+                                sono, atividade física e bem-estar.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="step">
+                        <div class="step-number">02</div>
+                        <div>
+                            <h3>Participe das atividades</h3>
+                            <p>
+                                Acesse os quizzes e desafios disponíveis
+                                para revisar o que aprendeu.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="step">
+                        <div class="step-number">03</div>
+                        <div>
+                            <h3>Reflita sobre o cotidiano</h3>
+                            <p>
+                                Pense em como os conhecimentos se relacionam
+                                com a vida diária e com a realidade da comunidade.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- PRIVACIDADE -->
+<section class="section-padding" style="background:#fffaf0;">
+    <div class="container">
+
+        <div class="privacy-box">
+            <div class="row align-items-start g-3">
+
+                <div class="col-auto">
+                    <span style="font-size:2.5rem;">🔒</span>
+                </div>
+
+                <div class="col">
+                    <h3>Privacidade e respeito</h3>
+
+                    <p>
+                        As atividades de reflexão sobre hábitos devem
+                        respeitar a participação voluntária e a privacidade
+                        dos estudantes. Quando houver coleta de respostas
+                        para fins do projeto, ela deverá ser explicada de
+                        forma transparente, evitar dados pessoais
+                        desnecessários e seguir as orientações da instituição
+                        responsável. Os quizzes não servem para diagnosticar
+                        problemas de saúde nem para avaliar ou rotular pessoas.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CHAMADA FINAL -->
+<section class="cta-section">
+    <div class="container text-center">
+
+        <span class="section-label">Faça parte dessa experiência</span>
+
+        <h2 class="section-heading mt-3">
+            Conhecimento é o primeiro passo.
+        </h2>
+
+        <p class="section-description mb-4">
+            Explore os conteúdos e participe das atividades do
+            Viver Bem de Verdade. Aprender sobre saúde também é
+            descobrir novas formas de compreender o mundo.
+        </p>
+
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+            <a href="{% url 'comida_saude' %}" class="btn-green">
+                Explorar Comida &amp; Saúde
+            </a>
+
+            <a href="{% url 'quizzes' %}" class="btn-outline-green">
+                Ver desafios e quizzes
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+
+<script>
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            const menu = document.getElementById('menu');
+
+            if (menu.classList.contains('show')) {
+                bootstrap.Collapse.getOrCreateInstance(menu).hide();
+            }
+        });
+    });
+</script>
+
+{% endblock %}

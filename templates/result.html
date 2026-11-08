@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <main class="container py-4 py-md-5">
+        <div class="result-wrapper">
+
+            <div class="text-center mb-4">
+                <p class="text-success fw-bold mb-1">
+                    QUIZ CONCLUÍDO!
+                </p>
+                <h1 class="h3 fw-bold">
+                    Descobrimos sua fruta!
+                </h1>
+                <p class="text-secondary mb-0">
+                    Veja qual fruta combina com sua personalidade.
+                </p>
+            </div>
+
+            <section class="result-card">
+
+                <div class="result-banner">
+                <span class="result-label">
+                    Sua fruta é...
+                </span>
+
+                    <div class="fruit-illustration" role="img"
+                         aria-label="Maçã vermelha">
+                        🍎
+                    </div>
+
+                    <h2 class="result-title mb-0">
+                        Maçã
+                    </h2>
+
+                    <p class="fw-bold mt-2 mb-0"
+                       style="color: #527a48;">
+                        A pessoa organizada
+                    </p>
+                </div>
+
+                <div class="result-content">
+
+                    <h3 class="h5 fw-900 mb-3">
+                        Você tem o espírito de uma maçã!
+                    </h3>
+
+                    <p class="result-description">
+                        Você é uma pessoa dedicada, responsável e que gosta
+                        de fazer as coisas com atenção. Costuma pensar antes
+                        de agir, valoriza seus compromissos e procura dar o
+                        seu melhor naquilo que faz. Sua organização pode ser
+                        uma grande aliada para realizar seus objetivos!
+                    </p>
+
+                    <div class="trait-list">
+                        <span class="trait">📚 Organizado</span>
+                        <span class="trait">🎯 Dedicado</span>
+                        <span class="trait">🤝 Responsável</span>
+                    </div>
+
+                    <div class="p-3 rounded-4 mb-4"
+                         style="background: #f7f9f4;">
+                        <p class="fw-bold mb-1">
+                            🍏 Curiosidade sobre sua fruta
+                        </p>
+                        <p class="text-secondary small mb-0">
+                            A maçã contém fibras e outros nutrientes que
+                            fazem parte de uma alimentação variada e
+                            equilibrada.
+                        </p>
+                    </div>
+
+                    <div class="d-flex flex-column flex-sm-row
+                            justify-content-center gap-3 result-buttons">
+
+                        <a href="{% url 'quiz_frutas' %}"
+                           class="btn btn-main">
+                            🔄 Fazer novamente
+                        </a>
+
+                        <a href="/"
+                           class="btn btn-secondary-custom">
+                            Voltar ao início
+                        </a>
+
+                    </div>
+
+                    <p class="footer-note mt-4 mb-0">
+                        Este resultado é recreativo e não representa uma
+                        avaliação científica da personalidade.
+                    </p>
+
+                </div>
+            </section>
+
+            <p class="text-center text-secondary small mt-4">
+                Viver Bem de Verdade · Saúde, Comida e Sociedade
+            </p>
+
+        </div>
+    </main>
+
+
+
+
+{% endblock %}

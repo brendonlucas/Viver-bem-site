@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+
+
+    <!-- APRESENTAÇÃO -->
+    <header class="hero">
+        <div class="container">
+            <div class="row align-items-center g-4">
+
+                <div class="col-lg-8">
+                    <span class="hero-label">Aprender também pode ser divertido</span>
+
+                    <h1>
+                        Preparado para<br>
+                        <span>um desafio?</span>
+                    </h1>
+
+                    <p>
+                        Explore nossos quizzes, teste seus conhecimentos,
+                        descubra curiosidades e aprenda de um jeito interativo.
+                        Escolha uma atividade e comece quando quiser!
+                    </p>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="hero-emoji" aria-hidden="true">
+                        🧩🎯
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- LISTA DE QUIZZES -->
+    <main class="catalog-section">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <span class="section-label">Escolha sua atividade</span>
+                <h2 class="section-heading">Quizzes disponíveis</h2>
+
+                <p class="section-description">
+                    Cada desafio tem uma proposta diferente.
+                    Escolha um dos cards abaixo para acessar a atividade.
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- QUIZ 1: FRUTAS -->
+                <div class="col-lg-6">
+                    <article class="quiz-card">
+
+                        <div class="quiz-art fruit-art" aria-hidden="true">
+                            🍓🍍🍉
+                        </div>
+
+                        <div class="quiz-content">
+                            <span class="quiz-badge">Quiz recreativo</span>
+
+                            <h3>Descubra qual fruta combina com você!</h3>
+
+                            <p>
+                                Responda a 10 perguntas sobre suas preferências
+                                e descubra qual fruta representa seu estilo
+                                e algumas características da sua personalidade.
+                            </p>
+
+                            <div class="quiz-meta">
+                                <span>📝 10 perguntas</span>
+                                <span>🎨 Personalidade</span>
+                                <span>⏱️ Rápido e divertido</span>
+                            </div>
+
+                            <a href="{% url 'quiz_frutas' %}"
+                               class="btn-green">
+                                Fazer quiz →
+                            </a>
+                        </div>
+
+                    </article>
+                </div>
+
+
+                <!-- QUIZ 2: HÁBITOS E BEM-ESTAR -->
+                <div class="col-lg-6">
+                    <article class="quiz-card">
+
+                        <div class="quiz-art health-art" aria-hidden="true">
+                            🥗💧💚
+                        </div>
+
+                        <div class="quiz-content">
+                            <span class="quiz-badge">Projeto de extensão</span>
+
+                            <h3>Quiz sobre hábitos e bem-estar</h3>
+
+                            <p>
+                                Reflita sobre sua rotina, alimentação,
+                                hidratação, sono e atividade física.
+                                Uma atividade voltada à conscientização
+                                sobre hábitos cotidianos.
+                            </p>
+
+                            <div class="quiz-meta">
+                                <span>📋 Hábitos saudáveis</span>
+                                <span>💚 Autoconhecimento</span>
+                                <span>🔒 Participação anônima</span>
+                            </div>
+
+                            <!--
+                              Troque o destino abaixo pelo nome da URL
+                              quando o primeiro quiz estiver implementado.
+                            -->
+                            <a href="#quiz-habitos"
+                               class="btn-green">
+                                Acessar quiz →
+                            </a>
+                        </div>
+
+                    </article>
+                </div>
+
+            </div>
+
+            <!-- AVISO -->
+            <div class="info-banner mt-5">
+                <div class="d-flex gap-3 align-items-start">
+                    <span style="font-size:2rem;" aria-hidden="true">💡</span>
+
+                    <div>
+                        <h3 class="h5 fw-bold">Aprender sem julgamentos</h3>
+
+                        <p>
+                            Os quizzes têm objetivos educativos e recreativos.
+                            O resultado do quiz das frutas não é uma avaliação
+                            científica de personalidade. A atividade sobre hábitos
+                            deve respeitar a privacidade dos participantes e não
+                            serve para diagnosticar condições de saúde.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <script>
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const menu = document.getElementById('menu');
+
+                if (menu.classList.contains('show')) {
+                    bootstrap.Collapse.getOrCreateInstance(menu).hide();
+                }
+            });
+        });
+    </script>
+
+
+
+
+{% endblock %}

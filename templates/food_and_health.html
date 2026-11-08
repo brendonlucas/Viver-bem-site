@@ -1,0 +1,481 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- APRESENTAÇÃO -->
+    <header class="hero">
+        <div class="container">
+            <div class="row align-items-center g-4">
+
+                <div class="col-lg-7">
+                    <span class="hero-label">Aprenda a cuidar de você</span>
+
+                    <h1>
+                        Comida é mais que alimento.<br>
+                        <span>É saúde, cultura e vida!</span>
+                    </h1>
+
+                    <p>
+                        O que comemos, bebemos e compartilhamos faz parte
+                        da nossa história. Descubra como os alimentos
+                        participam do funcionamento do corpo e como a
+                        sociedade influencia nossos hábitos.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+                        <a href="#alimentacao" class="btn-green">
+                            Explorar os conteúdos ↓
+                        </a>
+
+                        <a href="#desafio" class="btn-outline-green">
+                            Testar meus conhecimentos
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="hero-illustration">
+                    <span role="img" aria-label="Frutas, verduras e água">
+                        🍎🥦
+                    </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- INTRODUÇÃO -->
+    <section class="section-padding" id="alimentacao">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <span class="section-label">Entenda o básico</span>
+                <h2 class="section-heading">Por que a alimentação importa?</h2>
+
+                <p class="section-description">
+                    Os alimentos fornecem energia e nutrientes para o corpo.
+                    Uma alimentação variada ajuda a atender às necessidades
+                    do organismo e faz parte de uma rotina saudável.
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <article class="info-card">
+                        <div class="info-icon">⚡</div>
+                        <h3>Energia para o dia</h3>
+                        <p>
+                            O corpo utiliza a energia dos alimentos para
+                            estudar, brincar, caminhar, praticar esportes
+                            e realizar as tarefas do cotidiano.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-md-4">
+                    <article class="info-card">
+                        <div class="info-icon">💪</div>
+                        <h3>Crescimento e manutenção</h3>
+                        <p>
+                            Proteínas, vitaminas, minerais e outros nutrientes
+                            participam do crescimento e do funcionamento
+                            adequado do organismo.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-md-4">
+                    <article class="info-card">
+                        <div class="info-icon">🌈</div>
+                        <h3>Variedade no prato</h3>
+                        <p>
+                            Comer alimentos diferentes, respeitando a cultura,
+                            as necessidades e as possibilidades de cada pessoa,
+                            contribui para uma alimentação mais variada.
+                        </p>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- GRUPOS DE ALIMENTOS -->
+    <section class="section-padding" style="background:#f0f6ec;">
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-5">
+                    <span class="section-label">Monte seu conhecimento</span>
+                    <h2 class="section-heading">Conheça os alimentos</h2>
+
+                    <p class="text-secondary" style="line-height:1.9;">
+                        Não existe um único alimento que forneça tudo de que
+                        precisamos. O importante é conhecer diferentes grupos
+                        e buscar variedade ao longo do tempo.
+                    </p>
+
+                    <div class="notice mt-4">
+                        <p>
+                            <strong>💡 Uma dica:</strong> sempre que possível,
+                            varie frutas, legumes, verduras, feijões e outros
+                            alimentos nas refeições.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="food-list">
+
+                        <article class="food-item">
+                            <span class="food-emoji">🍌</span>
+                            <div>
+                                <h3>Frutas</h3>
+                                <p>
+                                    Banana, maçã, mamão e outras frutas oferecem
+                                    água, fibras, vitaminas e minerais.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="food-item">
+                            <span class="food-emoji">🥕</span>
+                            <div>
+                                <h3>Legumes e verduras</h3>
+                                <p>
+                                    Cenoura, abóbora, couve e alface ajudam
+                                    a diversificar as refeições e fornecem
+                                    diferentes nutrientes.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="food-item">
+                            <span class="food-emoji">🍚</span>
+                            <div>
+                                <h3>Cereais e tubérculos</h3>
+                                <p>
+                                    Arroz, milho, aveia, mandioca e batata
+                                    são exemplos de alimentos que fornecem
+                                    energia ao organismo.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="food-item">
+                            <span class="food-emoji">🫘</span>
+                            <div>
+                                <h3>Feijões e outras leguminosas</h3>
+                                <p>
+                                    Feijão, lentilha, ervilha e grão-de-bico
+                                    fornecem fibras, proteínas vegetais
+                                    e outros nutrientes.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="food-item">
+                            <span class="food-emoji">🥚</span>
+                            <div>
+                                <h3>Ovos, carnes e outras fontes de proteína</h3>
+                                <p>
+                                    Ovos, peixes, carnes e outras fontes
+                                    de proteína participam da construção
+                                    e manutenção dos tecidos do corpo.
+                                </p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- HIDRATAÇÃO -->
+    <section class="section-padding" id="hidratacao">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <span class="section-label">Um hábito essencial</span>
+                <h2 class="section-heading">Não esqueça da água! 💧</h2>
+
+                <p class="section-description">
+                    A água participa de diversas funções do organismo,
+                    como a regulação da temperatura e o transporte de
+                    substâncias pelo corpo.
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <article class="tip-box">
+                        <div class="info-icon">🚰</div>
+                        <h3>Tenha água por perto</h3>
+                        <p>
+                            Quando possível, mantenha uma garrafa de água
+                            acessível e lembre-se de beber ao longo do dia.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-md-4">
+                    <article class="tip-box">
+                        <div class="info-icon">☀️</div>
+                        <h3>Preste atenção ao calor</h3>
+                        <p>
+                            Em dias quentes e durante atividades físicas,
+                            o corpo pode perder mais água. Faça pausas
+                            e hidrate-se regularmente.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-md-4">
+                    <article class="tip-box">
+                        <div class="info-icon">🥤</div>
+                        <h3>Escolha suas bebidas</h3>
+                        <p>
+                            A água é uma ótima escolha para a hidratação.
+                            Bebidas açucaradas não precisam ser a opção
+                            principal do dia a dia.
+                        </p>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- RÓTULOS -->
+    <section class="section-padding" style="background:#fff5df;">
+        <div class="container">
+
+            <div class="row align-items-center g-4">
+
+                <div class="col-lg-5">
+                    <div style="font-size:5rem;">🏷️🔎</div>
+                    <span class="section-label">Olho no rótulo</span>
+                    <h2 class="section-heading">O que a embalagem nos conta?</h2>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="food-list">
+
+                        <article class="food-item">
+                            <span class="food-emoji">📋</span>
+                            <div>
+                                <h3>Lista de ingredientes</h3>
+                                <p>
+                                    Apresenta os ingredientes usados no produto,
+                                    geralmente em ordem decrescente de quantidade.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="food-item">
+                            <span class="food-emoji">📊</span>
+                            <div>
+                                <h3>Tabela nutricional</h3>
+                                <p>
+                                    Informa a quantidade de energia e nutrientes,
+                                    como açúcares, proteínas, gorduras e sódio.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="food-item">
+                            <span class="food-emoji">⚠️</span>
+                            <div>
+                                <h3>Rotulagem frontal</h3>
+                                <p>
+                                    No Brasil, alguns produtos apresentam
+                                    alertas na frente da embalagem para indicar
+                                    alto conteúdo de nutrientes específicos,
+                                    como açúcares adicionados, gordura saturada
+                                    ou sódio.
+                                </p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- COMIDA E SOCIEDADE -->
+    <section class="section-padding">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <span class="section-label">Muito além do prato</span>
+                <h2 class="section-heading">Comida também é cultura e sociedade</h2>
+
+                <p class="section-description">
+                    Nossos hábitos alimentares são influenciados por muito
+                    mais do que preferências individuais.
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <article class="info-card">
+                        <div class="info-icon">👨‍👩‍👧</div>
+                        <h3>Família e tradições</h3>
+                        <p>
+                            Receitas, costumes e refeições compartilhadas
+                            ajudam a construir nossas memórias e nossa cultura.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-md-4">
+                    <article class="info-card">
+                        <div class="info-icon">🛒</div>
+                        <h3>Acesso aos alimentos</h3>
+                        <p>
+                            Preços, disponibilidade, tempo e condições de vida
+                            influenciam os alimentos que chegam à mesa.
+                        </p>
+                    </article>
+                </div>
+
+                <div class="col-md-4">
+                    <article class="info-card">
+                        <div class="info-icon">🌎</div>
+                        <h3>Respeito às diferenças</h3>
+                        <p>
+                            Cada família tem sua realidade. Aprender sobre
+                            alimentação também significa respeitar culturas,
+                            necessidades e possibilidades diferentes.
+                        </p>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- DESAFIO INTERATIVO -->
+    <section class="section-padding quiz-section" id="desafio">
+        <div class="container">
+
+            <div class="text-center mb-4">
+                <span class="section-label">Hora de praticar</span>
+                <h2 class="section-heading">Desafio do conhecimento 🧠</h2>
+                <p class="section-description">
+                    Responda à pergunta e veja se você acertou!
+                </p>
+            </div>
+
+            <div class="quiz-card">
+                <span class="badge text-bg-success mb-3">Pergunta 1 de 1</span>
+
+                <h3 class="h5 fw-bold mb-4">
+                    Qual destas atitudes ajuda a manter uma boa hidratação?
+                </h3>
+
+                <form id="knowledgeQuiz">
+
+                    <label class="answer-option">
+                        <input type="radio" name="resposta" value="A" required>
+                        Beber água ao longo do dia.
+                    </label>
+
+                    <label class="answer-option">
+                        <input type="radio" name="resposta" value="B">
+                        Esperar sentir muita sede todos os dias.
+                    </label>
+
+                    <label class="answer-option">
+                        <input type="radio" name="resposta" value="C">
+                        Trocar toda a água por refrigerantes.
+                    </label>
+
+                    <label class="answer-option">
+                        <input type="radio" name="resposta" value="D">
+                        Evitar beber água quando está calor.
+                    </label>
+
+                    <button class="btn-green mt-4" type="submit">
+                        Conferir resposta
+                    </button>
+                </form>
+
+                <div id="feedback" role="status" aria-live="polite"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ENCERRAMENTO -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center">
+
+                <div style="font-size:3rem;">🌱</div>
+
+                <h2 class="section-heading">
+                    Conhecimento também alimenta!
+                </h2>
+
+                <p class="section-description mb-4">
+                    Cada pessoa tem uma realidade diferente. Aprender sobre
+                    alimentação é um passo para fazer escolhas mais conscientes,
+                    dentro das possibilidades de cada um.
+                </p>
+
+                <a href="{% url 'home' %}" class="btn-green">
+                    Voltar para o início ↑
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <script>
+        const form = document.getElementById('knowledgeQuiz');
+        const feedback = document.getElementById('feedback');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const resposta = new FormData(form).get('resposta');
+
+            feedback.className = '';
+
+            if (resposta === 'A') {
+                feedback.textContent =
+                    '🎉 Muito bem! Beber água regularmente ao longo do dia ajuda a manter a hidratação.';
+                feedback.classList.add('feedback-correct');
+            } else {
+                feedback.textContent =
+                    '💡 Quase! A melhor resposta é beber água ao longo do dia. Tente novamente!';
+                feedback.classList.add('feedback-wrong');
+            }
+        });
+    </script>
+
+
+
+
+{% endblock %}
